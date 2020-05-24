@@ -116,6 +116,22 @@ sudo iptables -t nat -A POSTROUTING --destination 192.168.0.2/32 -j SNAT --to-so
 Стоит учесть при работе с iptables, что маскарадинг работает медленнее чем SNAT (обратитесь к документации).
 
 
+Дополнительная информация:
+
+https://www.karlrupp.net/en/computer/nat_tutorial
+
+http://www.k-max.name/linux/iptables-v-primerax/
+
+http://www.k-max.name/linux/netfilter-iptables-v-linux/
+
+http://jensd.be/343/linux/forward-a-tcp-port-to-another-ip-or-port-using-nat-with-iptables
+
+http://linux-ip.net/html/nat-dnat.html
+
+https://gist.github.com/tomasinouk/eec152019311b09905cd
+
+
+
 5. Все гостевые машины по умолчанию ходят в интернет через 192.168.255.1 (inetRouter), для этого сделаны настройки (на примере centralServer):
 ```
 echo "DEFROUTE=no" >> /etc/sysconfig/network-scripts/ifcfg-eth0 
